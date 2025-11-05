@@ -1,0 +1,15 @@
+# Ghostty Configuration File Reference
+# https://ghostty.org/docs/config
+
+# Command to show default values
+# ghostty +show-config --default
+
+# https://ghostty.org/docs/config/reference#font-size
+font-size = 15
+
+# https://ghostty.org/docs/config/reference#mouse-hide-while-typing
+mouse-hide-while-typing = true
+
+# https://ghostty.org/docs/config/reference#theme
+theme = light:iTerm2 Solarized Light,dark:Rose Pine Moon
+

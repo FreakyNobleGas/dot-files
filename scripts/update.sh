@@ -5,7 +5,7 @@
 #
 
 # Save current dir and move to script directory
-pushd "$(dirname "$0")" > /dev/null
+pushd "$(dirname "$0")/.." > /dev/null
 
 # Save .oh-my-zsh custom plugins and themes
 rsync -av --exclude 'plugins' --exclude 'themes' "$HOME/.oh-my-zsh/custom/" ".oh-my-zsh/custom/"
