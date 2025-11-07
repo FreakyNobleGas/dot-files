@@ -16,6 +16,9 @@ cp $HOME/.zshrc .zshrc
 # Save Ghostty Config file
 cp $HOME/.config/ghostty/config .config/ghostty/config
 
+# Save Starship Config File
+cp $HOME/.config/starship.toml .config/starship.toml
+
 # Commit and push changes to GitHub
 git add .
 git commit -m "Update dot files"

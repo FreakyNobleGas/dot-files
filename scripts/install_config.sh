@@ -20,5 +20,8 @@ cp .zshrc "$HOME/.zshrc"
 # Install Ghostty Config file
 cp .config/ghostty/config "$HOME/.config/ghostty/config"
 
+# Install Starship Config file
+cp .config/starship.toml "$HOME/.config/starship.toml"
+
 # Return to original directory
 popd > /dev/null
