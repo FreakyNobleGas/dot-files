@@ -13,3 +13,5 @@ mouse-hide-while-typing = true
 # https://ghostty.org/docs/config/reference#theme
 theme = light:iTerm2 Solarized Light,dark:Rose Pine Moon
 
+# Add keybind for newline characters in Claude CLI
+keybind = shift+enter=text:\n
