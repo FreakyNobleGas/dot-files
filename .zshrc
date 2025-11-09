@@ -19,11 +19,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 ##########################
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
 # Starship Documentation:
 # https://starship.rs/
 eval "$(starship init zsh)"
