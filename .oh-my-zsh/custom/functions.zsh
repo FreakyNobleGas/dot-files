@@ -15,3 +15,8 @@ export gm() {
   git add .
   git commit -m "$*"
 }
+
+# NVIM
+export save_nvim_config() {
+  rsync -av --exclude '.git' "$HOME/.config/nvim/" "$GITHUB_PATH/freakynoblegas/nvim-config/nvim/"
+}

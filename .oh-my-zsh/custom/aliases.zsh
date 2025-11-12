@@ -9,7 +9,6 @@ source $GITHUB_PATH/freakynoblegas/nvim-config/env.sh
 alias nv='nvim .'
 alias open_nvim_config='cd ~/.config/nvim && nv && cd -'
 alias edit_nvim_config="open_nvim_config"
-alias update_nvim_config="cp -r $HOME/.config/nvim/ $GITHUB_PATH/freakynoblegas/nvim-config/nvim"
 
 # GITHUB 
 alias gs='git status'
