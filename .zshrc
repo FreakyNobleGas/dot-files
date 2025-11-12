@@ -19,6 +19,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 ##########################
 
+# Ruby
+eval "$(rbenv init - zsh)"
+
 # Starship Documentation:
 # https://starship.rs/
 eval "$(starship init zsh)"

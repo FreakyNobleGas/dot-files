@@ -1,9 +1,9 @@
 # PATHS
-GITHUB_PATH="$HOME/Github/"
+GITHUB_PATH="$HOME/Github"
 
 # DOT FILES
 export save_dot_files() {
-  bash ${GITHUB_PATH}dot-files/scripts/update.sh
+  bash ${GITHUB_PATH}/freakynoblegas/dot-files/scripts/update.sh
 }
 
 # GITHUB

@@ -3,13 +3,13 @@ GITHUB_PATH="$HOME/Github/"
 ZK_NOTEBOOK_DIR="$HOME/Documents/zk-notes/"
 
 # SOURCE
-source $GITHUB_PATH/nvim-config/env.sh
+source $GITHUB_PATH/freakynoblegas/nvim-config/env.sh
 
 # NEOVIM
 alias nv='nvim .'
 alias open_nvim_config='cd ~/.config/nvim && nv && cd -'
 alias edit_nvim_config="open_nvim_config"
-alias update_nvim_config="cp -r $HOME/.config/nvim/ $GITHUB_PATH/nvim-config/nvim"
+alias update_nvim_config="cp -r $HOME/.config/nvim/ $GITHUB_PATH/freakynoblegas/nvim-config/nvim"
 
 # GITHUB 
 alias gs='git status'
