@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # https://github.com/ohmyzsh/ohmyzsh/wiki/plugins
 plugins=(zsh-autosuggestions zsh-syntax-highlighting docker docker-compose python)
 
-source $HOME/sensitive-exports.zsh
+source $HOME/.sensitive-exports.zsh
 source $ZSH/oh-my-zsh.sh
 
 ##########################
