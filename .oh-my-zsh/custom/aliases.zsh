@@ -13,6 +13,7 @@ alias edit_nvim_config="open_nvim_config"
 # GITHUB 
 alias gs='git status'
 alias lg='lazygit'
+alias gcm='git checkout main'
 
 # PATH HELPERS
 alias github_dir='cd $GITHUB_PATH'
@@ -23,4 +24,4 @@ alias zkd='zk daily'
 alias zkei='zk edit -i'
 
 # ZSHRC
-alias edit_zshrc='cd $ZSH_CUSTOM && nv && cd - && source ~/.zshrc'
+alias edit_zshrc='cd $ZSH_CUSTOM && nv && cd - && source ~/.zshrc && save_dot_files'
