@@ -6,6 +6,7 @@
 brew install starship
 brew install --cask font-jetbrains-mono
 brew install uv
+brew install lazygit
 
 # Install rbenv
 # rbenv install --list
@@ -27,5 +28,6 @@ npm install -g dockerfile-language-server-nodejs
 
 # Install dependencies that I use on my personal machine
 if [ "$USER" == "freakynoblegas" ]; then
-   brew install --cask claude-code 
+  brew install --cask claude-code
 fi
+
