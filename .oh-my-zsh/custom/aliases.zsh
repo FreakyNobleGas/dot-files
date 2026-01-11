@@ -10,7 +10,7 @@ source $GITHUB_PATH/freakynoblegas/nvim-config/env.sh
 alias nv='nvim .'
 alias open_nvim_config='cd ~/.config/nvim && nv && cd -'
 alias edit_nvim_config="open_nvim_config"
-alias apply_nvim_config='rm -rf ${NEOVIM_CONFIG_PATH}/* && cp ${GITHUB_PATH}/freakynoblegas/nvim-config/nvim/* ${NEOVIM_CONFIG_PATH}'
+
 # GITHUB 
 alias gs='git status'
 alias lg='lazygit'
