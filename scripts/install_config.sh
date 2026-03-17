@@ -23,5 +23,17 @@ cp .config/ghostty/config "$HOME/.config/ghostty/config"
 # Install Starship Config file
 cp .config/starship.toml "$HOME/.config/starship.toml"
 
+# Install ZK config and templates
+if [ -z "$ZK_NOTEBOOK_DIR" ]; then
+  echo "Error: ZK_NOTEBOOK_DIR is not set. Skipping ZK config install."
+  echo "Set it in your shell config and re-run this script."
+  exit 1
+fi
+mkdir -p "$ZK_NOTEBOOK_DIR/.zk/templates"
+mkdir -p "$ZK_NOTEBOOK_DIR/meetings"
+mkdir -p "$ZK_NOTEBOOK_DIR/journal"
+cp zk/config.toml "$ZK_NOTEBOOK_DIR/.zk/config.toml"
+rsync -av zk/templates/ "$ZK_NOTEBOOK_DIR/.zk/templates/"
+
 # Return to original directory
 popd > /dev/null

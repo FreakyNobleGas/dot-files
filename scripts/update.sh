@@ -19,6 +19,14 @@ cp $HOME/.config/ghostty/config .config/ghostty/config
 # Save Starship Config File
 cp $HOME/.config/starship.toml .config/starship.toml
 
+# Save ZK config and templates
+if [ -z "$ZK_NOTEBOOK_DIR" ]; then
+  echo "Warning: ZK_NOTEBOOK_DIR is not set. Skipping ZK config update."
+else
+  rsync -av "$ZK_NOTEBOOK_DIR/.zk/config.toml" zk/config.toml
+  rsync -av "$ZK_NOTEBOOK_DIR/.zk/templates/" zk/templates/
+fi
+
 # Commit and push changes to GitHub
 git add .
 git commit -m "Update dot files"
