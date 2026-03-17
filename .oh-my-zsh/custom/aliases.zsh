@@ -1,6 +1,5 @@
 # PATHS
 GITHUB_PATH="$HOME/Github/"
-NEOVIM_CONFIG_PATH="$HOME/.config/nvim"
 ZK_NOTEBOOK_DIR="$HOME/Documents/zk-notes/"
 
 # SOURCE
