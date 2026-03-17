@@ -59,16 +59,12 @@ author = "Nicholas Quinn"
 paths = ["journal"]
 
 [group.journal.note]
-filename = "{{format-date now '%Y-%m-%d'}}"
-extension = "md"
 template = "journal.md"
 
 [group.meetings]
 paths = ["meetings"]
 
 [group.meetings.note]
-filename = "{{format-date now '%Y-%m-%d'}}"
-extension = "md"
 template = "meetings.md"
 
 # You can override global settings from [note] and [extra] for a particular
