@@ -31,3 +31,5 @@ if [ "$USER" == "freakynoblegas" ]; then
   brew install --cask claude-code
 fi
 
+# To support image rendering in nvim markdown files
+brew install imagemagick
