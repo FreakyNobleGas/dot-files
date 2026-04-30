@@ -88,5 +88,44 @@ gcb() {
 
 # NVIM
 export save_nvim_config() {
-  rsync -av --exclude '.git' "$HOME/.config/nvim/" "$GITHUB_PATH/freakynoblegas/nvim-config/nvim/"
+  local repo_dir="$GITHUB_PATH/freakynoblegas/nvim-config"
+
+  # Abort if there are uncommitted changes in the repo
+  if ! git -C "$repo_dir" diff --quiet || ! git -C "$repo_dir" diff --cached --quiet; then
+    echo "Aborting: uncommitted changes in $repo_dir"
+    return 1
+  fi
+
+  # Sync local config into repo
+  echo "Syncing nvim config..."
+  rsync -av --exclude '.git' "$HOME/.config/nvim/" "$repo_dir/nvim/"
+
+  # Stage, commit, and push
+  git -C "$repo_dir" add -A
+  if git -C "$repo_dir" diff --cached --quiet; then
+    echo "Nothing to commit."
+    return 0
+  fi
+
+  git -C "$repo_dir" commit -m "chore: update nvim config" || return 1
+  git -C "$repo_dir" push || return 1
+  echo "Nvim config saved and pushed."
+}
+
+export apply_nvim_config() {
+  local repo_dir="$GITHUB_PATH/freakynoblegas/nvim-config"
+
+  # Abort if there are uncommitted changes in the repo
+  if ! git -C "$repo_dir" diff --quiet || ! git -C "$repo_dir" diff --cached --quiet; then
+    echo "Aborting: uncommitted changes in $repo_dir"
+    return 1
+  fi
+
+  # Pull latest changes
+  echo "Pulling latest changes..."
+  git -C "$repo_dir" pull || return 1
+
+  # Replace local config completely (--delete removes files not in source)
+  echo "Replacing local nvim config..."
+  rsync -av --delete --exclude '.git' "$repo_dir/nvim/" "$HOME/.config/nvim/"
 }

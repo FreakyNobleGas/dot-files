@@ -25,3 +25,6 @@ alias zkei='zk edit -i'
 
 # ZSHRC
 alias edit_zshrc='cd $ZSH_CUSTOM && nv && cd - && source ~/.zshrc && save_dot_files'
+
+# BESPOKE
+alias fixbattle='killall -9 "Battle.net" Agent "Blizzard Agent" 2>/dev/null || true; echo "Battle.net processes terminated."'
