@@ -7,6 +7,7 @@ brew install starship
 brew install --cask font-jetbrains-mono
 brew install uv
 brew install lazygit
+brew install openjdk # For Groovy syntax support in NeoVim
 
 # Install rbenv
 # rbenv install --list
